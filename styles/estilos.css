@@ -1,0 +1,303 @@
+*{
+    padding: 0;
+    margin: 0;
+    max-width: 100%;
+}
+
+.submenu{
+    position: absolute;
+    background: #333333;
+    right: none;
+    display: none;
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+}
+
+
+.submenu li a{
+    display: inline-block;
+    padding: 15px;
+    color: white;
+    text-decoration: none;
+}
+
+.list li:hover .submenu{
+    display: block;
+}
+
+.submenu .ig:hover{
+    color: rgb(218, 6, 255);
+    border-bottom: none;
+}
+
+.submenu .fb:hover{
+    color: #1B74E4;
+    border-bottom: none;
+}
+
+nav {
+    position: absolute;
+    z-index: 10;
+    left: 0;
+    right: 0;
+    top: 0;
+    padding: 0 2%;
+    height: 100px;
+    background-color: #000000;
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+nav .logo{
+    float: left;
+    width: 40%;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    font-size: 24px;
+    color: #ffffff;
+    font-weight: bold;
+    text-transform: uppercase;
+    gap: 1.5em;
+}
+
+nav .list{
+    float: right;
+    padding: 0;
+    margin: 0;
+    width: 45%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav .list li{
+    list-style: none;
+}
+
+nav .list li a{
+    text-transform: uppercase;
+    padding: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    color: #ffffff;
+    text-decoration: none;
+    line-height: 100px;
+    justify-content: center;
+}
+
+
+nav .list li a:hover{
+    border-bottom: 5px solid #f1e3e3 ;
+}
+
+#toggle{
+    position: absolute;
+    top: -100px;
+}
+
+nav .icon-bars {
+    display: none;
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+}
+
+nav .icon-bars .line{
+    width: 30px;
+    height: 5px;
+    background-color: white;
+    margin: 5px;
+    border-radius: 3px;
+    transition: all .3s ease-in-out;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+} 
+
+/* Media queries para pantallas más pequeñas */
+@media (max-width: 768px) {
+    nav .list {
+        position: fixed;
+        top: 100px;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.8);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transform: translateY(-100%);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    /* Mostrar botón hamburguesa */
+    .icon-bars {
+        display: flex;
+    }
+
+    /* Controlar la apertura del menú con input checkbox */
+    #toggle:checked ~ nav .list {
+        transform: translateY(0);
+    }
+
+    nav .list li a {
+        font-size: 20px;
+        line-height: normal;
+    }
+} 
+
+.intro{
+    bottom: 100px;
+    left: 70px;
+    top: 110px;
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    color: white;
+    font-size: 77px;
+    font-family: "Ranchers", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}   
+
+.intro .parrafo{
+    font-size: 40px;
+    font-family: "Raleway", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    display: flex;
+}
+
+.intro button{
+    background-color: #FFAA00;
+    width: 150px;
+    padding: 15px 20px;
+    font-family: "Raleway", sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+.horario{
+    font-size: 40px;
+    color: orange;
+    font-family: "Raleway", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    display: flex;
+}
+
+.contenedor{
+    display: flex;
+    justify-content: center;
+}
+
+.menu{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+    font-family: "Raleway", sans-serif;
+}
+
+.portadas{
+    height: 400px;
+    cursor: pointer;
+    box-shadow: #f3f3f3;
+    display: flex;
+    max-width: 2000px;
+    margin: 0 auto;
+}
+
+.portadas .face{
+    width: 120%;
+    height: 120%;
+    left: 50%;
+    margin-left: 20px;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: .5s;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    -ms-transition: .5s;
+    -o-transition: .5s;
+}
+
+.portadas .front{
+    transform: perspective(600px) rotateY(0deg);
+    box-shadow: 0 5px 10px #000;
+}
+
+.portadas .front img{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 300ms;
+    -webkit-transition: all 300ms;
+    -moz-transition: all 300ms;
+    -ms-transition: all 300ms;
+    -o-transition: all 300ms;
+}
+
+.portadas .front img:hover{
+    transform: scale(1.25);
+    -webkit-transform: scale(1.25);
+    -moz-transform: scale(1.25);
+    -ms-transform: scale(1.25);
+    -o-transform: scale(1.25);
+}
+
+.portadas .front h3{
+    position: absolute;
+    bottom: 0;
+    top: 45%;
+    width: 100%;
+    height: 47px;
+    line-height: 45px;
+    color: #fff;
+    background: rgba(0, 0, 0, .4);
+    text-align: center;
+}
+
+.portadas .back {
+    transform: perspective(600px) rotateY(180deg);
+    background: rgb(189, 161, 19);
+    padding: 15px;
+    color: #f3f3f3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    -webkit-transform: perspective(600px) rotateY(180deg);
+    -moz-transform: perspective(600px) rotateY(180deg);
+    -ms-transform: perspective(600px) rotateY(180deg);
+    -o-transform: perspective(600px) rotateY(180deg);
+    box-shadow: 0 5px 10px #000;
+}
